@@ -13,15 +13,16 @@
             text-align: center;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Prevents scrolling due to floating elements */
+            overflow: hidden;
         }
 
         /* Main Container Styling */
         .container {
-            background: rgba(20, 3, 3, 0.85); /* Semi-transparent white */
+            background: rgba(20, 3, 3, 0.85);
             padding: 20px;
             border-radius: 15px;
             width: 60%;
+            max-width: 600px;
             margin: 50px auto;
             box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
             border: 5px solid transparent;
@@ -47,7 +48,7 @@
             background: #ff3333;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 12px 20px;
             font-size: 18px;
             border-radius: 10px;
             cursor: pointer;
@@ -73,6 +74,8 @@
             z-index: 2;
             display: none;
             animation: fadeIn 0.5s ease-in-out;
+            width: 90%;
+            max-width: 400px;
         }
 
         /* Fade-in animation */
@@ -114,6 +117,44 @@
             100% {
                 transform: translateY(-100px);
                 opacity: 0;
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+
+            .yes {
+                width: 100%;
+                font-size: 16px;
+                padding: 10px;
+            }
+
+            .popup {
+                width: 85%;
+                max-width: 350px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            .floating {
+                font-size: 18px;
             }
         }
     </style>
@@ -182,9 +223,6 @@
             *I can’t wait to create unforgettable memories together,  
             to laugh until our stomachs hurt, to dream big,  
             and to face life’s challenges as a team.*  
-            <br><br>
-            *You’ve always been someone special to me,  
-            and now I feel like the luckiest person alive to call you mine.*  
             <br><br>
             *This is just the beginning of something amazing,  
             and I can’t wait to see where our story takes us.  
