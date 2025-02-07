@@ -106,16 +106,57 @@
                 font-size: 16px;
             }
 
-            .buttons {
-                flex-direction: column;
-            }
+            /* Button Container */
+.buttons {
+    display: flex;
+    flex-direction: column;  /* Stacks buttons on smaller screens */
+    align-items: center;
+    gap: 10px; /* Adds space between buttons */
+    margin-top: 20px;
+}
 
-            .yes, .friends {
-                width: 100%;
-                font-size: 16px;
-                padding: 10px;
-            }
-        }
+/* Button Styles */
+.yes, .friends {
+    background: #ff4d94;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;  /* Makes button full width on smaller screens */
+    max-width: 250px; /* Prevents buttons from being too wide */
+    text-align: center;
+}
+
+/* Hover Effects */
+.yes:hover {
+    background: #cc0052;
+    box-shadow: 0px 0px 10px #cc0052;
+}
+
+.friends {
+    background: #999;
+}
+
+.friends:hover {
+    background: #666;
+    box-shadow: 0px 0px 10px #666;
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 600px) {
+    .buttons {
+        flex-direction: column; /* Ensures buttons stack */
+    }
+
+    .yes, .friends {
+        width: 90%; /* Ensures buttons fit well on smaller screens */
+        max-width: none;
+    }
+  }
+}
     </style>
 </head>
 <body>
